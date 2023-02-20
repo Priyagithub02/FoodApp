@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ShopLogin">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/shoploginmail"
+        android:inputType="textEmailAddress"
+        android:hint="Username or Email"
+        android:layout_margin="20dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/shoploginpassword"
+        android:layout_below="@id/shoploginmail"
+        android:layout_margin="20dp"
+        android:inputType="textPassword"
+        android:hint="Password"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Enter details to login"
+        android:id="@+id/error_login"
+        android:layout_below="@id/shoploginpassword"
+        android:textColor="@color/red"
+        android:visibility="gone"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/shoploginbutton"
+        android:text="login"
+        android:layout_below="@id/error_login"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/shoploginbutton"
+        android:text="Not an user?"
+        android:id="@+id/notuser"
+        android:layout_marginLeft="140dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/notuser"
+        android:layout_below="@id/shoploginbutton"
+        android:text=" Register"
+        android:id="@+id/registerbuttn"
+        android:textColor="@color/purple_700"/>
+</RelativeLayout>

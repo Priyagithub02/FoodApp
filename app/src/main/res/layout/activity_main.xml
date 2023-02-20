@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp"
+    android:fillViewport="true">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/username"
+        android:hint="Name"
+        android:inputType="textCapSentences"
+        android:layout_margin="20dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/email"
+        android:hint="E-Mail"
+        android:layout_below="@id/username"
+        android:inputType="textEmailAddress"
+        android:layout_margin="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/email"
+            android:id="@+id/mailerror"
+            android:text="Enter valid e-mail"
+            android:layout_margin="20dp"
+            android:textColor="@color/red"
+            android:visibility="gone"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/phoneno"
+        android:hint="Phone Number"
+        android:inputType="number"
+        android:layout_below="@id/mailerror"
+        android:layout_margin="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/phoneno"
+            android:id="@+id/phnoerror"
+            android:text="Enter valid phone number"
+            android:layout_margin="20dp"
+            android:textColor="@color/red"
+            android:visibility="gone" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/password"
+            android:hint="Password"
+            android:layout_below="@id/phnoerror"
+            android:inputType="textPassword"
+            android:layout_margin="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/password"
+            android:id="@+id/passerror"
+            android:text="Password must contain more than 5 characters with a mixture of alphabets,numbers and special characters"
+            android:layout_margin="20dp"
+            android:textColor="@color/red"
+            android:visibility="gone" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/confirmpass"
+            android:hint="Re-enter Password"
+            android:layout_below="@id/passerror"
+            android:inputType="textPassword"
+            android:layout_margin="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/confirmpass"
+            android:id="@+id/repasserror"
+            android:text="Passwords does not match"
+            android:layout_margin="20dp"
+            android:textColor="@color/red"
+            android:visibility="gone" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/regis"
+            android:layout_below="@id/repasserror"
+            android:backgroundTint="@color/black"
+            android:text="register"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/haveacc"
+        android:text="already have an account?"
+        android:layout_below="@id/regis"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="20dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/login"
+        android:text=" Login"
+        android:textColor="@color/purple_700"
+        android:layout_below="@id/regis"
+        android:layout_toRightOf="@id/haveacc"
+        android:layout_marginTop="20dp"/>
+    <com.google.android.gms.common.SignInButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        android:id="@+id/googlesignin"/>
+</RelativeLayout>
+</ScrollView>

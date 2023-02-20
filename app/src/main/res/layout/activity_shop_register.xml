@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ShopRegister">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:id="@+id/shopname"
+        android:hint="Shop name"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:id="@+id/shopmail"
+        android:layout_below="@id/shopname"
+        android:hint="Shop mail"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/shopmail"
+        android:inputType="textPassword"
+        android:layout_margin="20dp"
+        android:id="@+id/shoppass"
+        android:hint="Password"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/passworderror"
+        android:layout_below="@id/shoppass"
+        android:text="Password must contain more than 5 characters with a mixture of alphabets,numbers and special characters"
+        android:textColor="@color/red"
+        android:visibility="gone"
+        android:layout_margin="20dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/passworderror"
+        android:inputType="textPassword"
+        android:layout_margin="20dp"
+        android:id="@+id/shopconfirmpass"
+        android:hint="Confirm Password"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/confirmpassworderror"
+        android:layout_below="@id/shopconfirmpass"
+        android:text="Passwords do not match"
+        android:visibility="gone"
+        android:textColor="@color/red"
+        android:layout_margin="20dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:id="@+id/shopmobile"
+        android:layout_below="@id/confirmpassworderror"
+        android:hint="Shop mobile"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mobileerror"
+        android:layout_below="@id/shopmobile"
+        android:text="Enter valid mobile number"
+        android:visibility="gone"
+        android:textColor="@color/red"
+        android:layout_margin="20dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:id="@+id/shoptelephone"
+        android:layout_below="@id/mobileerror"
+        android:hint="Shop Telephone (optional)"/>
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/category"
+        android:layout_margin="20dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:layout_below="@id/shoptelephone"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/category"
+        android:id="@+id/shoperror"
+        android:text="Enter details to continue"
+        android:textColor="@color/red"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/shoperror"
+        android:layout_centerHorizontal="true"
+        android:text="Register"
+        android:id="@+id/register"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/haveacc"
+        android:text="already have an account?"
+        android:layout_below="@id/register"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="20dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/login"
+        android:text=" Login"
+        android:textColor="@color/purple_700"
+        android:layout_below="@id/register"
+        android:layout_toRightOf="@id/haveacc"
+        android:layout_marginTop="20dp"/>
+    </RelativeLayout>
+</ScrollView>

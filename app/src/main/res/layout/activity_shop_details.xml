@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ShopDetails">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:hint="Name of person of first contact"
+        android:id="@+id/firstcontactname"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_below="@id/firstcontactname"
+        android:hint="Mail id of person of first contact"
+        android:id="@+id/firstcontactmail"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_below="@id/firstcontactmail"
+        android:hint="Phone no of person of first contact"
+        android:id="@+id/firstcontactphone"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/firstcontactphone"
+        android:layout_margin="20dp"
+        android:id="@+id/firstcontactid"
+        android:hint="Id proof of first person of contact"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_upload_24"
+        android:layout_marginRight="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="30dp"
+        android:id="@+id/upload_ID"
+        android:layout_below="@id/firstcontactphone"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:backgroundTint="@color/black"
+        android:layout_below="@id/firstcontactid"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/submitbutton"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/submitbutton"
+        android:layout_alignParentRight="true"
+        android:text="2/2"
+        android:layout_marginRight="20dp"/>
+
+    </RelativeLayout>
+</ScrollView>

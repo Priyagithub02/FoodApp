@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ShopPayment">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/shoppaymentdetails"
+        android:layout_margin="20dp"
+        android:text="Shop Payment Details"
+        android:layout_centerHorizontal="true"
+        android:textSize="25dp"
+        android:textStyle="bold"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bank Account"
+        android:layout_below="@id/shoppaymentdetails"
+        android:layout_margin="20dp"
+        android:id="@+id/bankacc"
+        android:textSize="20dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bankacc"
+        android:layout_margin="20dp"
+        android:hint="Account No"
+        android:id="@+id/accno"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/accno"
+        android:layout_margin="20dp"
+        android:hint="IFSC code"
+        android:id="@+id/ifsc"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ifsc"
+        android:layout_margin="20dp"
+        android:hint="Branch"
+        android:id="@+id/branchname"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/branchname"
+        android:layout_margin="20dp"
+        android:hint="Account holder name"
+        android:id="@+id/holdername"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/holdername"
+        android:text="UPI payment"
+        android:textSize="20dp"
+        android:layout_margin="20dp"
+        android:id="@+id/upi"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/upi"
+        android:layout_margin="20dp"
+        android:hint="Upi id"
+        android:id="@+id/upiid"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/upiid"
+        android:backgroundTint="@color/black"
+        android:layout_centerHorizontal="true"
+        android:text="Submit"
+        android:id="@+id/submit_button"/>
+    </RelativeLayout>
+</ScrollView>
