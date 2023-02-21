@@ -20,7 +20,7 @@
             android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_baseline_upload_24"
-            android:layout_alignRight="@id/dor"
+            android:layout_alignParentRight="true"
             android:layout_marginTop="25dp"
             android:id="@+id/uploadregcertificate"/>
     <EditText
@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
         android:src="@drawable/ic_baseline_calendar_month_24"
         android:layout_below="@id/registerceritificate"
-        android:layout_alignRight="@id/dor"
+            android:layout_alignParentRight="true"
         android:layout_marginTop="20dp"
         android:id="@+id/dateofregister"/>
         <EditText
@@ -55,7 +55,7 @@
             android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_baseline_upload_24"
-            android:layout_alignRight="@id/dor"
+            android:layout_alignParentRight="true"
             android:layout_marginTop="175dp"
             android:id="@+id/uploadnoc"/>
         <EditText
@@ -70,7 +70,7 @@
             android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_baseline_upload_24"
-            android:layout_alignRight="@id/dor"
+            android:layout_alignParentRight="true"
             android:layout_marginTop="255dp"
             android:id="@+id/uploadsafetystandard"/>
     <EditText

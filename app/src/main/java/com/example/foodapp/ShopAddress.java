@@ -16,6 +16,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
 import com.google.android.gms.common.GooglePlayServicesRepairableException;
@@ -248,7 +249,7 @@ public class ShopAddress extends AppCompatActivity {
             public void onClick(View v) {
                 PlacePicker.IntentBuilder builder = new PlacePicker.IntentBuilder();
                 try {
-                    startActivityForResult(builder.build(ShopAddress.this), PLACE_PICKER_REQUEST);
+                    startActivityForResult(builder.build(ShopAddress.this),PLACE_PICKER_REQUEST);
                 } catch (GooglePlayServicesRepairableException e) {
                     e.printStackTrace();
                 } catch (GooglePlayServicesNotAvailableException e) {
@@ -266,10 +267,14 @@ public class ShopAddress extends AppCompatActivity {
                 String shopstate = shop_state.getSelectedItem().toString();
                 String postalcode = postal_code.getText().toString();
                 String location = maplocation.getText().toString();
+                if(shop_add1.isEmpty()||shopcity.isEmpty()||shopstate.isEmpty()||postalcode.isEmpty()){
+                    Toast.makeText(ShopAddress.this, "Enter address to continue", Toast.LENGTH_SHORT).show();
+                }else{
                 databaseReference = FirebaseDatabase.getInstance().getReference().child("SHOPS").child("SHOP ADDRESS").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
                 databaseReference.setValue(new ShopAddressList(shop_add1, shop_add2, landmark, shopcity, shopstate, postalcode,location));
                 Intent i = new Intent(ShopAddress.this, ShopDocuments.class);
                 startActivity(i);
+                }
             }
         });
     }
@@ -280,14 +285,8 @@ public class ShopAddress extends AppCompatActivity {
             if(resultCode == RESULT_OK){
                 Place place = PlacePicker.getPlace(data,this);
                 StringBuilder stringBuilder = new StringBuilder();
-                String latitude = String.valueOf(place.getLatLng().latitude);
-                String longitude = String.valueOf(place.getLatLng().longitude);
-                stringBuilder.append("LATITUDE:");
-                stringBuilder.append(latitude);
-                stringBuilder.append("\n");
-                stringBuilder.append("LONGITUDE");
-                stringBuilder.append(longitude);
-                maplocation.setText(stringBuilder.toString());
+                String address = String.format("Place: %s",place.getAddress());
+                maplocation.setText(address);
             }
         }
     }

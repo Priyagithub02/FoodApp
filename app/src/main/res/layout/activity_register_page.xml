@@ -5,20 +5,49 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".RegisterPage">
-    <Button
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="MAIN PAGE"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="40dp"
+        android:textStyle="bold"
+        android:textSize="20dp"/>
+    <Button
+        android:layout_width="160dp"
+        android:layout_height="60dp"
         android:id="@+id/userregister"
         android:text="User"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="100dp"
+        android:backgroundTint="@color/black"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="200dp"
         />
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
         android:layout_toRightOf="@id/userregister"
         android:id="@+id/shopregister"
-        android:layout_marginTop="100dp"
+        android:backgroundTint="@color/black"
+        android:layout_marginTop="200dp"
         android:text="Shop"
+        android:layout_marginLeft="20dp"/>
+    <Button
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:id="@+id/shopadmin"
+        android:layout_below="@id/userregister"
+        android:layout_marginTop="100dp"
+        android:backgroundTint="@color/black"
+        android:text="Shop Admin"
+        android:layout_marginLeft="40dp"/>
+    <Button
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:layout_toRightOf="@id/userregister"
+        android:id="@+id/deliverperson"
+        android:layout_marginTop="100dp"
+        android:text="Delivery person"
+        android:backgroundTint="@color/black"
+        android:layout_below="@id/shopregister"
         android:layout_marginLeft="20dp"/>
 </RelativeLayout>
